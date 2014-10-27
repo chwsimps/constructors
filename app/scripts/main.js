@@ -25,7 +25,7 @@ function expect(target) {
         return false;
       }
     }
-  }
+  };
 }
 
 //                          __                  __
@@ -37,21 +37,21 @@ function expect(target) {
 // Only add code to *THIS* section!
 
 var Dog = function (options) {
-  var options = options || {};
+  options = options || {};
   this.color = options.color;
   this.status = options.status || 'normal';
   this.hungry = (options.hungry === undefined) ? true : false;
 };
 
 var Human = function (options) {
-  var options = options || {};
+  options = options || {};
   this.owner = options.owner;
   this.pet = function(dog){
     dog.status = 'happy';
-  }
+  };
   this.feed = function(dog){
     dog.hungry = false;
-  }
+  };
   this.cool = options.cool || false;
 };
 

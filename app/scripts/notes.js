@@ -59,3 +59,51 @@ $.fn.extend({
 // 	this.color = options.color;
 //   this.condition = options.condition || 'New';
 // };
+
+
+// if (1) {
+//   result = 'something';
+// } else {
+//   result = 'something else';
+// }
+
+var result = (1 === 1) ? 'something' : 'something else'; //<- Ternary operator (? = if and : = else)
+
+console.log(result);
+
+
+
+(function ($) {
+
+  var me = {
+    name: 'Tim',
+    age: 30
+  };
+
+  window.me = me;
+
+  // $('h1').html(me.name);
+
+}(window.jQuery));
+
+
+(function () {
+
+  myObj = {
+    me: function () {
+        console.log(this);
+    }
+  };
+
+  myObj.me(); //myObj
+
+  //call or apply
+  myObj.me.call();
+
+  //bind
+  var newbounded = myObj.me.bind(window);
+
+  newbounded(); //Turns call function into a variable
+
+
+}());
